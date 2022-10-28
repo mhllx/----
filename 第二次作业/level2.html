@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level2</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background-image: url(source/16-cover.jpg);
+            /*原尺寸：
+    width: 17280px;
+    height: 24576px;*/
+            width: 345.6px;
+            height: 491.52px;
+            background-position: center center;
+            background-size: 345.6px 491.52px;
+            border-radius: 10px;
+            outline: skyblue solid 1px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+        }
+
+        .box:hover {
+            background-image: url(source/16-cover.jpg);
+            width: 345.6px;
+            height: 491.52px;
+            background-position: center center;
+            background-size: 345.6px 491.52px;
+            box-shadow: 4px 4px 10px #06C,
+                -4px -4px 10px #06C;
+            transform: translate(0px, -3px);
+            border-radius: 10px;
+            outline: skyblue solid 1px;
+        }
+
+        #sbox ,
+        #sbox>a{
+            background-color: rgb(66, 98, 225);
+            width: 150px;
+            height: 50px;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 50px;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        #sbox:hover{
+            background-color: rgb(66, 98, 225);
+            width: 150px;
+            height: 50px;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 50px;
+            color: aliceblue;
+            box-shadow: 3px 3px 5px grey,
+            -3px -3px 5px grey;
+            transform: scale(1.01);
+            transition-duration: 4ms;
+        }
+        .space{
+            height: 64px;
+            width: 345.6px;
+        }
+    </style>
+</head>
+<div class="box">
+    <div class="space"> </div>
+    <div id="sbox"><a href="#">我永远喜欢伊雷娜</a></div>
+</div>
+
+<body>
+</body>
+
+</html>
