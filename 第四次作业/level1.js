@@ -9,6 +9,7 @@ function SUM(n) {
 
 SUM(100)
 
+
 //递归
 const fn = (a) => {
     if (a == 1) {

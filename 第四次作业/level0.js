@@ -10,6 +10,7 @@ const stu = {
         speak() {
             this.name = 'JACK';
         }
+
     }
 }
 const {name} = stu;
