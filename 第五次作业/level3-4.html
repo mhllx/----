@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #LiuyanBOX {
+            width: 400px;
+            height: 600px;
+            background-color: pink;
+            border: 1px solid silver;
+        }
+
+        #tyin {
+            border: 1px solid aqua;
+            outline: 0px;
+            width: 200px;
+            height: 200px;
+            background-color: lightskyblue;
+        }
+
+        .input {
+            width: 300px;
+            height: 280px;
+            background-color: lightskyblue;
+        }
+
+        html,
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul id="LiuyanBOX"></ul>
+    </div>
+    <div class="input">
+        <textarea type="text" id="tyin" value=""></textarea>
+        <button id="pub">发布</button><button id="del">删除</button>
+        <br /><br /><br />
+        <input type="button" value="红色" class="color"><input type="button" value="黑色" class="color"><input type="button" value="蓝色" class="color">
+        <input type="button" value="白色" class="color"><input type="button" value="紫色" class="color"><input type="button" value="黄色" class="color">
+    </div>
+    <script>
+        var colors = new Array('red', 'black', 'blue', 'white', 'purple', 'yellow');
+        var choose = document.querySelectorAll('.color');
+        var pub = document.getElementById('pub');
+        var del = document.getElementById('del');
+        pub.onclick = function () {
+            let lis = document.getElementById('LiuyanBOX');
+            let Tyin = document.getElementById('tyin');
+            let li = document.createElement('li');
+            if (Tyin.value == '');
+            else {
+                li.innerHTML = Tyin.value;
+                lis.appendChild(li);
+            }
+        }
+        del.onclick = function(){
+            let lis = document.getElementById('LiuyanBOX');
+            let lili = document.getElementsByTagName('li')
+            if(lili.length == 0);
+            else lis.removeChild(lis.children[lili.length - 1]);
+        }
+        choose[0].onclick = function(){
+            let lis = document.getElementById('LiuyanBOX');            
+            lis.style.color = colors[0]
+        }
+        choose[1].onclick = function(){
+            let lis = document.getElementById('LiuyanBOX');            
+            lis.style.color = colors[1]
+        }
+        choose[2].onclick = function(){
+            let lis = document.getElementById('LiuyanBOX');            
+            lis.style.color = colors[2]
+        }
+        choose[3].onclick = function(){
+            let lis = document.getElementById('LiuyanBOX');            
+            lis.style.color = colors[3]
+        }
+        choose[4].onclick = function(){
+            let lis = document.getElementById('LiuyanBOX');            
+            lis.style.color = colors[4]
+        }
+        choose[5].onclick = function(){
+            let lis = document.getElementById('LiuyanBOX');            
+            lis.style.color = colors[5]
+        }
+    </script>
+</body>
+
+</html>

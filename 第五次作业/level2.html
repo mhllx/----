@@ -27,21 +27,21 @@
     </div>
 </body>
 <script>
-    var its = document.querySelectorAll('input')
-    its[4].onclick = function () {
+    var items = document.querySelectorAll('input')
+    items[4].onclick = function () {
         for (let i = 0; i < 4; i++) {
-            its[i].checked = true;
+            items[i].checked = true;
         }
     }
-    its[5].onclick = function(){
+    items[5].onclick = function(){
         for (let i = 0; i < 4; i++) {
-            its[i].checked = false;
+            items[i].checked = false;
         }
     }
-    its[6].onclick = function(){
+    items[6].onclick = function(){
         for(let i = 0;i<4;i++){
-            if(its[i].checked == true) its[i].checked = false;
-            else its[i].checked = true;
+            if(items[i].checked == true) items[i].checked = false;
+            else items[i].checked = true;
         }
     }
 </script>
