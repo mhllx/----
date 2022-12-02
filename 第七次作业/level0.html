@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bn{
+            height: 30px;
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div><button id="bn">GET</button></div>
+    <script>
+        /*https://taskapi.chovrio.club/ */
+        let btn = document.getElementById('bn');
+        btn.onclick = function () {
+            let xhr = new XMLHttpRequest();
+            xhr.open("get", "https://taskapi.chovrio.club/", true);
+            xhr.send();
+            xhr.onreadystatechange = ()=>{
+                if(xhr.readyState == 4)
+                {
+                    if(xhr.status == 200)
+                    {
+                        var data = xhr.responseText;
+                        console.log(data);
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
