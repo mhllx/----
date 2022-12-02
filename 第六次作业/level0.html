@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level0</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+
+        #aa {
+            background-color: aqua;
+        }
+
+        #bb {
+            background-color: orange;
+        }
+
+        #cc {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="aa"></div>
+    <div id="bb"></div>
+    <div id="cc"></div>
+    <script>
+        let aa = document.getElementById('aa');
+        let bb = document.getElementById('bb');
+        let cc = document.getElementById('cc');
+        setTimeout(() => {
+            aa.style.transform = 'translateX(300px)'
+            aa.style.transition = '3s'
+            setTimeout(() => {
+                bb.style.transform = 'translateX(300px)'
+                bb.style.transition = '3s';
+                setTimeout(() => {
+                    cc.style.transform = 'translateX(300px)'
+                    cc.style.transition = '3s';
+                }, 3500);
+            }, 3500);
+        }, 0);
+    </script>
+</body>
+
+</html>

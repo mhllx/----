@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level0</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+
+        #aa {
+            background-color: aqua;
+        }
+
+        #bb {
+            background-color: orange;
+        }
+
+        #cc {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="aa"></div>
+    <div id="bb"></div>
+    <div id="cc"></div>
+    <script>
+        let divs = document.getElementsByTagName('div');
+        var n = 0;
+        let step = (time) => {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    divs[n].style.transform = 'translateX(300px)';
+                    divs[n].style.transition = '3s';
+                    n = n + 1;
+                    resolve();
+                }, time);
+            });
+        };
+        async function demo() {
+            let word1 = await step(0);
+            let word2 = await step(3000);
+            let word3 = await step(3000);
+            return "done";
+        }
+        demo().then((ret) => {
+            console.log(ret);
+        });
+    </script>
+</body>
+
+</html>
